@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar - Hotel Paraíso</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <img src="img/logo.jpeg" alt="Logo Hotel Paraíso" height="40" class="me-2">
+            <a class="navbar-brand" href="index.html">Hotel Paraíso</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="habitaciones.html">Habitaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="reserva.html">Reservar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservas.html">Mis Reservas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="text-center mb-4">Reservar Habitación</h1>
+                
+                <div class="card shadow">
+                    <div class="card-body p-4">
+                        <form id="formReserva">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre Completo *</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono *</label>
+                                <input type="tel" class="form-control" id="telefono" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="tipoHabitacion" class="form-label">Tipo de Habitación *</label>
+                                <select class="form-select" id="tipoHabitacion" required>
+                                    <option value="">Seleccione una habitación</option>
+                                    <option value="Simple" data-precio="50">Habitación Simple - $50/noche</option>
+                                    <option value="Doble" data-precio="80">Habitación Doble - $80/noche</option>
+                                    <option value="Suite" data-precio="150">Suite - $150/noche</option>
+                                </select>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="checkIn" class="form-label">Fecha de Entrada (Check-in) *</label>
+                                    <input type="date" class="form-control" id="checkIn" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="checkOut" class="form-label">Fecha de Salida (Check-out) *</label>
+                                    <input type="date" class="form-control" id="checkOut" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="huespedes" class="form-label">Número de Huéspedes *</label>
+                                <input type="number" class="form-control" id="huespedes" min="1" max="5" value="1" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="solicitudes" class="form-label">Solicitudes Especiales (opcional)</label>
+                                <textarea class="form-control" id="solicitudes" rows="3" placeholder="Ej: Cama extra, vista al mar, etc."></textarea>
+                            </div>
+
+                            <div class="alert alert-info" id="resumenReserva" style="display: none;">
+                                <h5>Resumen de Reserva</h5>
+                                <p><strong>Noches:</strong> <span id="numNoches">0</span></p>
+                                <p><strong>Precio por noche:</strong> $<span id="precioPorNoche">0</span></p>
+                                <p class="mb-0"><strong>Total:</strong> $<span id="precioTotal">0</span></p>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-success btn-lg">Confirmar Reserva</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2025 Hotel Paraíso. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/reserva.js"></script>
+</body>
+</html>
