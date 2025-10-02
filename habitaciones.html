@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitaciones - Hotel Paraíso</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <img src="img/logo.jpeg" alt="Logo Hotel Paraíso" height="40" class="me-2">
+            <a class="navbar-brand" href="index.html">Hotel Paraíso</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="habitaciones.html">Habitaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reserva.html">Reservar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservas.html">Mis Reservas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Nuestras Habitaciones</h1>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-img-placeholder">
+                        <img src="img/habitaciones/simple.jpeg" class="card-img-top" alt="Simple">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Habitación Simple</h5>
+                        <p class="card-text">Perfecta para viajeros individuales. Incluye cama individual, baño privado y WiFi.</p>
+                        <p class="price-tag">$50 <small>por noche</small></p>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalSimple">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-img-placeholder">
+                        <img src="img/habitaciones/intermedia.jpeg" class="card-img-top" alt="Doble">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Habitación Doble</h5>
+                        <p class="card-text">Ideal para parejas o dos personas. Cama matrimonial, baño privado y TV.</p>
+                        <p class="price-tag">$80 <small>por noche</small></p>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalDoble">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-img-placeholder">
+                        <img src="img/habitaciones/suit.jpeg" class="card-img-top" alt="Suite"> 
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Suite</h5>
+                        <p class="card-text">Lujo y espacio. Sala de estar, dormitorio, jacuzzi y vistas espectaculares.</p>
+                        <p class="price-tag">$150 <small>por noche</small></p>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalSuite">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="reserva.html" class="btn btn-success btn-lg">Reservar Ahora</a>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSimple" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Habitación Simple</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-img-placeholder mb-3">
+                     <img src="img/habitaciones/simple.jpeg" class="img-fluid" alt="Simple"> 
+                    </div>
+                    <h4>$50 por noche</h4>
+                    <h6>Características:</h6>
+                    <ul>
+                        <li>1 cama individual</li>
+                        <li>Baño privado con ducha</li>
+                        <li>WiFi gratuito</li>
+                        <li>TV de 32"</li>
+                        <li>Aire acondicionado</li>
+                        <li>Minibar</li>
+                        <li>Capacidad: 1 persona</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="reserva.html" class="btn btn-primary">Reservar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalDoble" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Habitación Doble</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-img-placeholder mb-3">
+                        <img src="img/habitaciones/intermedia.jpeg" class="img-fluid" alt="Doble">
+                    </div>
+                    <h4>$80 por noche</h4>
+                    <h6>Características:</h6>
+                    <ul>
+                        <li>1 cama matrimonial</li>
+                        <li>Baño privado con tina</li>
+                        <li>WiFi gratuito</li>
+                        <li>TV de 42"</li>
+                        <li>Aire acondicionado</li>
+                        <li>Minibar</li>
+                        <li>Escritorio de trabajo</li>
+                        <li>Capacidad: 2 personas</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="reserva.html" class="btn btn-primary">Reservar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSuite" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Suite</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-img-placeholder mb-3">
+                        <img src="img/habitaciones/suit.jpeg" class="img-fluid" alt="Suite"> 
+                    </div>
+                    <h4>$150 por noche</h4>
+                    <h6>Características:</h6>
+                    <ul>
+                        <li>1 cama king size</li>
+                        <li>Sala de estar separada</li>
+                        <li>Baño con jacuzzi</li>
+                        <li>WiFi gratuito de alta velocidad</li>
+                        <li>TV de 55" en dormitorio y 42" en sala</li>
+                        <li>Aire acondicionado</li>
+                        <li>Minibar premium</li>
+                        <li>Balcón con vista panorámica</li>
+                        <li>Escritorio ejecutivo</li>
+                        <li>Capacidad: 2-3 personas</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="reserva.html" class="btn btn-primary">Reservar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2025 Hotel Paraíso. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
